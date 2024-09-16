@@ -1,9 +1,6 @@
-# Workshop #2: Overloading and Dynamic memory allocation
-* Version 1.0
-* [Version 1.1](#v11-correction)  (Changed the argument name asm to assess; asm is a C keyword and cannot be used as a variable name)
-* [Version 1.2](#v12) (Corrected typo in Room related functions in part 2)
+# Coding Question: Overloading and Dynamic memory allocation
 
-In this workshop, you will be able to modify the content of variables in other scopes, overload functions, allocate memory at run-time, and deallocate that memory when it is no longer required.
+In this, you will be able to modify the content of variables in other scopes, overload functions, allocate memory at run-time, and deallocate that memory when it is no longer required.
 
 ## Learning Outcomes
 Upon successful completion of this workshop, you will have demonstrated the abilities to:
