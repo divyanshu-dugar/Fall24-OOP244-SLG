@@ -1,0 +1,18 @@
+bool read(int& value, FILE* fptr) test passed
+bool read(double& value, FILE* fptr) test passed
+bool read(double& value, FILE* fptr) test passed
+File records and number of records do not match!
+Listing Good Data:
+1: Applied Problem Solving: 70.9
+2: Computer Principles for Programmers: 55.5
+3: Communicating Across Contexts : 63.8
+4: Introduction to Programming Using C: 88.0
+5: Introduction to UNIX/Linux and the Internet: 78.9
+6: Introduction to Database Systems: 98.0
+7: Data Communications Fundamentals: 100.0
+8: Introduction to Object Oriented Programming: 83.3
+9: Web Programming Principles: 50.0
+10: Advanced Database Services: 77.2
+11: Object-Oriented Software Development Using C++: 85.5
+12: Software Analysis and Design - I: 90.0
+13: Web Programming Tools and Framework: 95.0
