@@ -62,8 +62,6 @@ Skips a comma and then reads a cstring no longer than 60 characters from the fpt
 
 > Use the following format in the fscanf to accomplish this:<br/> `",%60[^\n]\n"`
 
-##### V1.1 correction
-(Changed the argument name in the following read function form **asm** to **assess**; **asm** is a C keyword and cannot be used as an variable name)
 ### `bool read(Assessment& assess, FILE* fptr);`
 First, it will try to read a double value for the mark and a string for the title into a temporary local double variable and a 60-character lone cString (+1 for null).
 
