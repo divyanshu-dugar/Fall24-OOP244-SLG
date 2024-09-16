@@ -8,7 +8,7 @@ Upon successful completion of this question, you will have demonstrated the abil
 -  overload functions;
 -  Use references;
 
-# Part 1
+# Instructions
 
 Your task is to create a module called **Assessments** (`Assessments.cpp and Assessments.h`) to implement multiple overloaded read functions to read a series of subject names and their average mark received by students that are saved in a file. 
 
@@ -96,90 +96,3 @@ Do not modify the main module.
 ## Expected output
 
 [correct_output.txt](./lab/correct_output.txt)
-
-# Part 2
-
-## Implementation  
-You task it to create a C++ program that manages hotel room reservations, including room and guest information. The program should consist of three modules: 
-- Room.cpp
-- Guest.cpp
-- main.cpp (tester). 
-
-
-Your task is to implement the functions in the respective modules.
-
-> Note that all unused pointers should be kept as nullptr after deallocation and if any of the set functions have invalid values as arguments.
-
-> We assume all user entries are valid and are done without any mistakes.
-
-### Structs/modules to be used:
-
-#### Guest
-This structure holds the names dynamically. It also tracks if the guest is an adult or a child.
-
-```c++
-struct Guest {
-   char* m_firstName;
-   char* m_lastName;
-   bool m_adult;
-};
-```
-
-#### Mandatory Guest related functions:
-
-```c++
-// sets the Guest variables and sets the m_adult flag to true if the age is greater than or equal to 18
-void set(Guest& guest, const char* first, const char* last, int age);
-
-// Prints the guest name:
-// "Name Surname(child)"
-// The child flag is printed if the guest is not an adult
-// and if the names are not set, "Vacated!" is printed.
-void print(const Guest& guest);
-
-// books the guest information from the console:
-// Name: Jake<ENTER>
-// Lastname: Doe<ENTER>
-// Age: 10<ENTER>
-void book(Guest& guest);
-
-// vacates the guest by dallocating its memory.
-void vacate(Guest& guest);
-```
-
-#### Room
-
-```c++
-struct Room {
-   char m_roomNumber[6];    
-   int m_noOfGuests;
-   Guest* m_guests;
-}
-```
-##### V1.2   
-#### Mandatory Room related functions:
-
-```c++
-// sets the Room by allocating a dynamic array of guests and setting the room number 
-// (no validation is done for room number)
-void set(Room& room, int numberOfGuests, const char* roomNumber);
-
-// Prints the room number and names of the guests in the following lines with four 
-// spaces of indentaion 
-// See correct_output.txt for the exact format
-void print(const Room& room);
-
-// Books a room by receiving the room number, number of guests and the guest information.
-// See correct_output.txt for the exact format
-void book(Room& room);
-
-// vacates the room by dallocating all the memory used.
-void vacate(Room& room);
-```
-
-## The tester program.
-[main.cpp](DIY/main.cpp)
-
-## Expected output
-[correct_output.txt](DIY/correct_output.txt)
-
