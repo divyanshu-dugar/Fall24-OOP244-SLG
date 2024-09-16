@@ -159,7 +159,6 @@ struct Room {
 }
 ```
 ##### V1.2   
-(Corrected the arguments from Guest to Room)
 #### Mandatory Room related functions:
 
 ```c++
@@ -180,66 +179,9 @@ void book(Room& room);
 void vacate(Room& room);
 ```
 
-
-## Tester program (main.cpp)
-This module is fully provided. Please do not modify it. Review it and make sure you understand how the functions that you have developed are being used.
-Make sure to include the safeguard in header files.
-
 ## The tester program.
 [main.cpp](DIY/main.cpp)
 
 ## Expected output
 [correct_output.txt](DIY/correct_output.txt)
-
-## Reflection
-
-Study your final solutions for each deliverable of the workshop, reread the related parts of the course notes, and make sure that you have understood the concepts covered by this workshop.  **This should take no less than 30 minutes of your time and the result is suggested to be at least 150 words in length.**
-
-Create a file named `reflect.txt` that contains your detailed description of the topics that you have learned in completing this workshop and mention any issues that caused you difficulty.
-
-You may be asked to talk about your reflection (as a presentation) in class.
-
-## DIY Submission (part 2)
-
-### Files to submit:  
-
-```reflect.txt``` and:
-```Text
-Room.cpp
-Room.h
-Guest.cpp
-Guest.h
-main.cpp 
-```
-
-### Data Entry
-
-No data entry is required for this part. Check the execution sample.
-
-### Submission Process
-
-
-Upload your source code to your `matrix` account. Compile and run your code using the `g++` compiler as shown in [Compiling and Testing Your Program](#compiling-and-testing-your-program) and make sure that everything works properly.
-
-Then, run the following command from your matrix account
-
-```bash
-~profname.proflastname/submit 2??/wX/pY_sss  <ENTER>
-```
-- Replace **??** with your subject code (`00 or 44`)
-- Replace **X** with Workshop number: [`1 to 10`]
-- Replace **Y** with the part number: [`1 or 2`]
-- Replace **sss** with the section: [`naa, nbb, nra, zaa, etc...`]
-
-and follow the instructions.
-
-#### Submitting Utils Module
-To have your custom Utils module compiled with your workshop and submitted, add a **u** to the part number of your workshop (i.e **u**p1 for part one and **u**p2 for part two) and issue the following submission command instead of the above:
-```bash
-~profname.proflastname/submit 2??/wX/upY_sss  <ENTER>
-```
-See [Custom Code Submission](#custom-code-submission) section for more detail
-
-> **⚠️Important:** Please note that a successful submission does not guarantee full credit for this workshop. If the professor is not satisfied with your implementation, your professor may ask you to resubmit. Re-submissions will attract a penalty.
-
 
