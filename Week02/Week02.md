@@ -91,8 +91,8 @@ When the loop is done compare the number of reads to the number of elements of t
 ## The tester program.
 Do not modify the main module.
 
-[main.cpp](./Week02/main.cpp)
+[main.cpp](./main.cpp)
 
 ## Expected output
 
-[correct_output.txt](./lab/correct_output.txt)
+[correct_output.txt](./correct_output.txt)
