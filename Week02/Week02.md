@@ -4,6 +4,7 @@ In this, you will be able to modify the content of variables in other scopes, ov
 
 ## Learning Outcomes
 Upon successful completion of this question, you will have demonstrated the abilities to:
+-  reading from files
 -  allocate and deallocated dynamic memory for an array and a single object
 -  overload functions;
 -  Use references;
