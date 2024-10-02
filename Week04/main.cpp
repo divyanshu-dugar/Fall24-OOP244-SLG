@@ -1,17 +1,7 @@
 /***********************************************************************
-// OOP244 Workshop #4 p1: tester program
-//
 // File	main.cpp
 // Version 1.0
-// Date: Summer 2023
 // Author Michael Huang
-// Description
-//
-// Revision History
-// -----------------------------------------------------------
-// Name            Date            Reason
-//
-/////////////////////////////////////////////////////////////////
 ***********************************************************************/
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
