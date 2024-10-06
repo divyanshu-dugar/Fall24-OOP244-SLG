@@ -91,16 +91,48 @@ public:
 };
 ```
 
-Each part corresponds to the number in your question:
-1. The `read` function reads comma-separated values.
-2. The `print` function displays size and name.
-3. The default constructor initializes an empty bottle.
-4. The `Winerack` constructor validates the rack size.
-5. The destructor deallocates memory.
-6. The `setEmpty` function invalidates the Winerack.
-7. The boolean casting operator checks if the Winerack is valid.
-8. The `+=` operator adds a bottle to the Winerack or sets it to an empty state if full.
-9. The `display` function prints all bottles if the Winerack is valid.
-10. The `read` function fills up the empty spots in the Winerack.
+## Coding Header File Answer
+
+```cpp
+#ifndef TECH_LAPTOP_H
+#define TECH_LAPTOP_H
+
+namespace tech {
+
+class Laptop {
+   char serialNumber[21]{};
+   int ramSize = 8;
+   char* brandModel = nullptr;
+
+public:
+   // Constructors
+   Laptop();
+   Laptop(const char* brandModel, const char* serialNumber, int ramSize = 8);
+
+   // Destructor
+   ~Laptop();
+
+   // Assignment Operators
+   Laptop& operator=(int value);            // To set RAM size
+   Laptop& operator=(const char* brandModel); // To set brand and model
+
+   // Boolean Cast Operator
+   operator bool() const;
+
+   // Addition Operator
+   Laptop operator+(const Laptop& right) const;
+
+   // Input/Output Functions
+   std::istream& read(std::istream& istr);
+   std::ostream& print(std::ostream& ostr = std::cout) const;
+};
+
+// Helper function to compare two laptops' RAM size
+bool compare(const Laptop& left, const Laptop& right);
+
+}
+
+#endif // TECH_LAPTOP_H
+```
 
 ---
