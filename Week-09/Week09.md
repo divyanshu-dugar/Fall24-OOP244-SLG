@@ -224,7 +224,7 @@ Uses the **view()** method to print the EmailFile.
 
 ## Tester Program
 
-[main.cpp](lab/main.cpp).
+[main.cpp](./main.cpp).
 
 ## Execution Sample
 
