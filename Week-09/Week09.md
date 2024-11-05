@@ -228,4 +228,4 @@ Uses the **view()** method to print the EmailFile.
 
 ## Execution Sample
 
-[Output Sample(correct_output.txt)](lab/correct_output.txt)
+[Output Sample(correct_output.txt)](./correct_output.txt)
