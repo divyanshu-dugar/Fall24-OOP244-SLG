@@ -1,12 +1,3 @@
-/***********************************************************************
-// OOP244 Workshop #7: Tester Program
-//
-// File:    main.cpp
-// Version: 1.0
-// Author:  Nick Romanidis
-//
-***********************************************************************/
-
 #include <iostream>
 #include <cstring>
 
