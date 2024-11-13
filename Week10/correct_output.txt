@@ -1,0 +1,57 @@
+SENECA Banking System
+
+[#1] Bank Account (Constructors)
+--------------------------------
+>> Jane Doe | $0.00 | 2023-05-19 | 04853,001,0037857
+
+Enter the following values when prompted: 
+John Evans
+100.25
+2022 12 6
+01234
+002
+0012345
+---------------------------
+[#2] Bank Account (I/O)
+-----------------------
+Name: John Evans
+Opening Balance: 100.25
+Date Opened (year month day): 2022 12 6
+Transit #: 01234
+Institution #: 002
+Account #: 0012345
+>> John Evans | $100.25 | 2022-12-06 | 01234,002,0012345
+
+[#3] Savings Account (Constructors)
+-----------------------------------
+>> Frank Wilson | $99.50 | 2023-05-19 | 04853,001,0037857 | 0.055% | 2023-05-19
+   $99.50 + $5.47 (0.055%) = $104.97 | 2023-05-19 => 2023-06-19
+   $104.97 + $5.77 (0.055%) = $110.75 | 2023-06-19 => 2023-07-19
+>> Frank Wilson | $110.75 | 2023-05-19 | 04853,001,0037857 | 0.055% | 2023-07-19
+
+Enter the following values when prompted: 
+Alivia Wright
+555.55
+2023 2 10
+54321
+003
+1122334
+2023 3 1
+0.047
+---------------------------
+[#4] Savings Account (I/O)
+--------------------------
+Name: Alivia Wright
+Opening Balance: 555.55
+Date Opened (year month day): 2023 2 10
+Transit #: 54321
+Institution #: 003
+Account #: 1122334
+Interest Date (year month day): 2023 3 1
+Interest Rate: 0.047
+>> Alivia Wright | $555.55 | 2023-02-10 | 54321,003,1122334 | 0.047% | 2023-03-01
+   $555.55 + $26.11 (0.047%) = $581.66 | 2023-03-01 => 2015-02-10
+   $581.66 + $27.34 (0.047%) = $609.00 | 2015-02-10 => 2015-03-10
+>> Alivia Wright | $609.00 | 2023-02-10 | 54321,003,1122334 | 0.047% | 2015-03-10
+
+-- END --
