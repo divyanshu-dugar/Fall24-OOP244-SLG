@@ -98,8 +98,8 @@ The class will contain the following public members.
 
 **Do not modify this module!**  Review the code and make sure you understand it.
 
-[main.cpp](Week10/main.cpp)
+[main.cpp](./main.cpp)
 
 ## Sample Output
 
-[correct_output.txt](Week10/correct_output.txt)
+[correct_output.txt](./correct_output.txt)
