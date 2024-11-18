@@ -1,0 +1,64 @@
+Library Items:
+***********************************************
+1>
+Title: The Great Gatsby (1925)
+===============================================
+2>
+Title: To Kill a Mockingbird (1960)
+===============================================
+3>
+Title: 1984 (1949)
+===============================================
+4>
+Title: Brave New World (1932)
+===============================================
+5>
+Title: The Catcher in the Rye (1951)
+===============================================
+
+Books:
+***********************************************
+1>
+Title: The Catcher in the Rye (1951)
+Author: J.D. Salinger
+===============================================
+2>
+Title: The Hobbit (1937)
+Author: J.R.R. Tolkien
+===============================================
+3>
+Title: Pride and Prejudice (1813)
+Author: Jane Austen
+===============================================
+4>
+Title: 1984 (1949)
+Author: George Orwell
+===============================================
+5>
+Title: The Great Gatsby (1925)
+Author: F. Scott Fitzgerald
+===============================================
+
+Testing Copy Assignment and copy constructor
+***********************************************
+Books sorted by publication year:
+1>
+Title: The Great Gatsby (1925)
+Author: F. Scott Fitzgerald
+===============================================
+2>
+Title: 1984 (1949)
+Author: George Orwell
+===============================================
+3>
+Title: The Catcher in the Rye (1951)
+Author: J.D. Salinger
+===============================================
+4>
+Title: The Hobbit (1937)
+Author: J.R.R. Tolkien
+===============================================
+5>
+Title: Pride and Prejudice (1813)
+Author: Jane Austen
+===============================================
