@@ -8,7 +8,7 @@ Upon successful completion, you will have demonstrated the abilities to:
 * Use the concept of inheritance and polymorphism to reuse functionality of parent in child classes
 * Describe what you have learned in completing this workshop
 
-# Part 1 - LAB (100%)
+# Instructions
 
 ## LibraryItem Class
 Create a LibraryItem class that represents different types of items in a library's inventory. The class should have the following data members:
