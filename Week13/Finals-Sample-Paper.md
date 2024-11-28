@@ -211,3 +211,136 @@ Total capacity of containers with sku 10 is: 6000.6
 2. The `main.cpp` file provided above should work without modification when compiled with your `calc.h`.
 
 --- 
+
+## Question 3
+
+---
+
+## **Class Inheritance and Rule of Three: `ExtendedName` Class Implementation**
+
+**Objective:**  
+In this task, you are required to create a class named **`ExtendedName`** that inherits from the **`IndividualName`** class. This class should manage dynamic memory for both a first name and a last name, following the **Rule of Three** for safe object management.
+
+### **Problem Description:**
+
+1. **Inheritance:**
+   - The **`ExtendedName`** class must inherit from the **`IndividualName`** class.
+   - The **`IndividualName`** class already manages a dynamic C-string for the first name.
+   - The **`ExtendedName`** class should extend this by adding a last name (another dynamic C-string) specific to the class.
+
+2. **Copy Management:**
+   - Use the **`copyString`** method from the **`IndividualName`** class to manage dynamic memory for the last name in the **`ExtendedName`** class.
+   - Implement the **Rule of Three** to handle the copy constructor, copy assignment operator, and destructor for safe memory management of **`ExtendedName`** objects.
+
+3. **Class Initialization:**
+   - The **`ExtendedName`** class should be initialized with two C-strings:
+     - The first name will be passed to the **`IndividualName`** base class.
+     - The second C-string (last name) will be specific to the **`ExtendedName`** class.
+   - If no last name is provided, it should be treated as `nullptr`.
+
+4. **Print Function:**
+   - Implement a **`print`** function in the **`ExtendedName`** class that outputs the full name (first name + last name) to a given `ostream`. The first and last name should be separated by a space.
+   - If the last name is `nullptr`, only print the first name.
+
+5. **File and Screen Output:**
+   - In your **`main`** function, create instances of **`ExtendedName`** and test the functionality by printing to both the screen and a file (`extended_names.txt`).
+   - Ensure the output follows the format specified below.
+
+---
+
+### **Provided Code**
+
+You are provided with the following **`IndividualName`** class that you do not need to modify. You are required to implement the **`ExtendedName`** class as described:
+
+```cpp
+#include <cstring>
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+class IndividualName {
+    char* m_name{};
+protected:
+    char* copyString(const char* content) {
+        char* newContent{};
+        if (content) {
+            newContent = new char[strlen(content) + 1];
+            strcpy(newContent, content);
+        }
+        return newContent;
+    }
+public:
+    IndividualName(const char* content = nullptr);
+    IndividualName(const IndividualName& other);
+    IndividualName& operator=(const IndividualName& other);
+    virtual ~IndividualName();
+    virtual ostream& print(ostream& ostr) const;
+};
+
+ostream& operator<<(ostream& ostr, const IndividualName& name);
+
+// DO NOT COMPLETE THE IMPLEMENTATION OF THE ABOVE CLASS. We assume the IndividualName class is fully implemented and works perfectly.
+
+// Implement the ExtendedName class below to satisfy the question's requirements.
+```
+
+### **Main Function:**
+
+```cpp
+int main() {
+    ofstream file("extended_names.txt");
+
+    // Create ExtendedName objects
+    ExtendedName ename1("Alice", "Green");
+    ExtendedName ename2 = ename1, ename3("Michael", "");
+
+    // Output to console
+    cout << ">" << ename1 << "-" << ename3 << "<" << endl;
+
+    // Output to file
+    file << ename1 << endl;
+
+    return 0;
+}
+```
+
+---
+
+### **Expected Output**
+
+#### **Screen Output:**
+```
+>Alice Green-Michael<
+```
+
+#### **File Output (`extended_names.txt`):**
+```
+Alice Green
+```
+
+---
+
+### **Tasks:**
+1. **Class Design**:
+   - Create the **`ExtendedName`** class that inherits from **`IndividualName`**.
+   - Add the necessary constructors, copy constructors, copy assignment operator, and destructor to handle dynamic memory.
+   
+2. **Print Function**:
+   - Implement the **`print`** function that displays the full name or just the first name if the last name is `nullptr`.
+
+3. **Ensure Proper Memory Management**:
+   - Follow the **Rule of Three** to ensure memory is correctly managed during object copying and destruction.
+
+4. **Test the Functionality**:
+   - Use the provided `main` function to test the class and ensure the output is as expected.
+
+---
+
+### **Hints:**
+
+- The **`copyString`** method in **`IndividualName`** will help in managing dynamic memory for both first and last names.
+- Ensure that you implement the **copy constructor**, **copy assignment operator**, and **destructor** in **`ExtendedName`** to properly manage memory and avoid leaks.
+- You can assume that the **`IndividualName`** class is fully implemented and you only need to focus on the **`ExtendedName`** class.
+
+---
+
