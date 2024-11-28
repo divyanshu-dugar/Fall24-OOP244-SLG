@@ -95,59 +95,54 @@ Alice
 
 # Question 2
 
-Here’s the implementation for the requested **`calcSum`** template function and its corresponding `calc.h` module. The implementation is versatile, adhering to the given requirements, and works with arrays of various types.
+Here’s the formatted question for your README file that you can use as a sample paper for GitHub:
 
 ---
 
-### File: `calc.h`
+## Template Function Implementation: `calcSum`
 
-```cpp
-#ifndef CALC_H
-#define CALC_H
-
-#include <type_traits> // For type safety and conversions
-
-// Template function to calculate the sum of array elements based on a condition
-template <typename classType, typename dataType, typename idType>
-void calcSum(const classType* array, dataType& sum, const idType& id, size_t size) {
-    // Ensure the sum is initialized to zero
-    sum = static_cast<dataType>(0);
-
-    // Iterate through the array
-    for (size_t i = 0; i < size; ++i) {
-        // Check if the current element matches the provided ID
-        if (array[i] == id) {
-            // Add the value of the element (converted to dataType) to the sum
-            sum += static_cast<dataType>(array[i]);
-        }
-    }
-}
-
-#endif // CALC_H
-```
+**Objective:**  
+Implement a template function named `calcSum` in a C++ module (`calc.h`) to calculate the sum of elements in an array based on a specified condition. The function should be versatile and applicable to arrays of different types.
 
 ---
 
-### Explanation of `calc.h`:
-1. **Template Parameters**:
-   - `classType`: Specifies the type of elements in the array.
-   - `dataType`: Specifies the type of the sum to be calculated.
-   - `idType`: Specifies the type of the identifier used for comparison.
+### **Problem Description**
 
-2. **Function Parameters**:
-   - **`array`**: A pointer to an array of type `classType`.
-   - **`sum`**: A reference to a variable of type `dataType` where the calculated sum is stored.
-   - **`id`**: An identifier of type `idType` to compare with elements in the array.
-   - **`size`**: The number of elements in the array.
+1. **Dynamic Template Function:**
+   - Create a template function `calcSum` that accepts three template parameters:
+     - `classType`: Represents the type of elements in the array.
+     - `dataType`: Represents the type of the sum to be calculated.
+     - `idType`: Represents the type of an identifier used for comparison.
 
-3. **Functionality**:
-   - Iterates through the array and compares each element with `id`.
-   - If an element matches the `id`, its value (converted to `dataType`) is added to the `sum`.
-   - Ensures type safety using `static_cast`.
+2. **Parameters of the Function:**
+   - The function must accept the following arguments:
+     - A pointer to an array of `classType`.
+     - A reference to a `dataType` variable for storing the calculated sum.
+     - An `idType` value to compare with the elements in the array.
+     - The size of the array (`size_t`).
+
+3. **Function Requirements:**
+   - The function should iterate through the array and compare each element with the provided identifier (`id`).
+   - If an element matches the identifier:
+     - Add its value to a running total of type `dataType`.
+     - Use type conversion (`static_cast`) to ensure type safety.
+   - Update the `sum` parameter with the total sum calculated.
+   - The function should not return any value.
+
+4. **Assumptions:**
+   - Array elements and the identifier can be compared using the `==` operator.
+   - Array elements can be converted to the `dataType` for summation.
+
+5. **Additional Requirements:**
+   - Write the function in a module named `calc.h`.
+   - Ensure that the module is standalone and ready to compile.
+   - Test the function using the provided `main` function.
 
 ---
 
-### File: `main.cpp`
+### **Provided Test Case**
+
+You are provided with the following `main.cpp` file to test your implementation:
 
 ```cpp
 #include <iostream>
@@ -191,20 +186,28 @@ int main() {
 
 ---
 
-### Output:
-When you compile and run the program, the output will be:
+### **Expected Output**
 
-```
+When the program is executed, it should produce the following output:
+
+```text
 Total capacity of containers with sku 10 is: 6000.6
 ```
 
 ---
 
-### Key Notes:
-1. The template function is written in a separate header file (`calc.h`) to be reused in other projects.
-2. The `Container` class demonstrates:
-   - Overloading the equality operator (`==`) to compare `m_sku` with an integer ID.
-   - A conversion operator to convert `Container` objects into a `double` for summation.
-3. The function adheres to the principle of dynamic type handling, ensuring safe conversions and calculations.
+### **Hints for Implementation**
 
-This design is clean, reusable, and extensible for other data types and scenarios.
+1. Use a `for` loop to iterate through the array.
+2. Check each element using the `==` operator to see if it matches the identifier.
+3. Convert the matching element's value to `dataType` before adding it to the total.
+4. Use `static_cast` for type safety during conversion.
+
+---
+
+### **Deliverables**
+
+1. The `calc.h` file containing the `calcSum` function implementation.
+2. The `main.cpp` file provided above should work without modification when compiled with your `calc.h`.
+
+--- 
