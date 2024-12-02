@@ -73,8 +73,6 @@ int main() {
 ---
 ### Question 2 - Answer
 
-Here is the implementation for the `calcSum` template function in a standalone module named `calc.h`. The function follows the given requirements for summing up elements in an array based on a specific condition.
-
 ---
 
 ### **`calc.h`**
@@ -98,8 +96,8 @@ void calcSum(const classType* array, dataType& sum, const idType& id, size_t siz
 
 #endif // CALC_H
 ```
-
 ---
+### Question 3 - Answer
 
 ```
 #include <cstring>
