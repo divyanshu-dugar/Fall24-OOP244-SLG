@@ -99,7 +99,7 @@ void calcSum(const classType* array, dataType& sum, const idType& id, size_t siz
 ---
 ### Question 3 - Answer
 
-```
+```cpp
 #include <cstring>
 #include <iostream>
 #include <fstream>
