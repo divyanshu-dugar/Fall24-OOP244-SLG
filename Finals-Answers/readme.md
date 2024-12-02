@@ -151,3 +151,24 @@ ostream& operator<<(ostream& ostr, const ExtendedName& name) {
     return name.print(ostr);
 }
 ```
+---
+### Question 4 - Answer
+---
+
+**filter_tools.h**
+```cpp
+#ifndef FILTER_TOOLS_H
+#define FILTER_TOOLS_H
+
+template <typename ElementType, typename SumType, typename ConditionType>
+void filterAndSum(const ElementType* array, SumType& sum, ConditionType condition, int size) {
+    sum = 0; // Initialize the sum
+    for (int i = 0; i < size; ++i) {
+        if (array[i] == condition) {
+            sum += static_cast<SumType>(array[i]); // Add matching element to the sum
+        }
+    }
+}
+
+#endif
+```
