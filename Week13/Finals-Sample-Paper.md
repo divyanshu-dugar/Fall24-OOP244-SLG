@@ -343,4 +343,57 @@ Alice Green
 - You can assume that the **`IndividualName`** class is fully implemented and you only need to focus on the **`ExtendedName`** class.
 
 ---
+## Question 4 - Template Function
 
+Construct a template function named **`filterAndSum`** in a C++ template file named **`filter_tools.h`**. This function filters elements from an array that meet a specified condition and accumulates their sum. It should be designed to handle arrays of various data types.
+
+### **Guidelines:**
+
+1. The template file should be fully prepared for compilation.
+2. Your template function should use the following template arguments:
+   - **ElementType**: The type of elements in the array.
+   - **SumType**: The type used to calculate and store the sum.
+   - **ConditionType**: The type used to define the filtering condition.
+
+3. The function should take the following parameters:
+   - An array of **ElementType**.
+   - A reference to **SumType** for accumulating the sum.
+   - A condition value of **ConditionType**.
+   - The size of the array (an integer).
+
+4. Iterate through the array of **ElementType**, comparing each element to the **ConditionType** value. 
+5. If an element matches the condition, add its value (converted to **SumType**) to the sum.
+6. Assign the accumulated value to the sum reference parameter.
+7. Assume that the `==` operator is suitable for comparisons and that conversion to **SumType** is valid for array elements.
+
+### **Example Main Function**:
+```cpp
+#include <iostream>
+#include "filter_tools.h"
+using namespace std;
+
+class Item {
+    int m_id;
+    double m_value;
+
+public:
+    Item(int id, double value) : m_id(id), m_value(value) {}
+    operator double() const { return m_value; }
+    bool operator==(int id) const { return m_id == id; }
+};
+
+int main() {
+    Item items[4] = { {1, 500.5}, {2, 300.3}, {1, 100.1}, {3, 200.2} };
+    double total{};
+    int filterId = 1;
+
+    filterAndSum(items, total, filterId, 4); // <-- calling the template
+
+    cout << "Total value of items with ID " << filterId << " is: " << total << endl;
+    return 0;
+}
+
+// Output:
+// Total value of items with ID 1 is: 600.6
+```
+---
