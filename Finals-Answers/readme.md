@@ -100,31 +100,55 @@ void calcSum(const classType* array, dataType& sum, const idType& id, size_t siz
 ```
 
 ---
-```
-#ifndef PAIR_H
-#define PAIR_H
 
-template <typename V, typename K>
-class Pair {
-    V m_value{};
-    K m_key{};
+```
+#include <cstring>
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+class ExtendedName : public IndividualName {
+    char* m_lastName{};
 
 public:
-    Pair() = default;
-    Pair(const K& key, const V& value) : m_key(key), m_value(value) {}
-
-    const V& value() const { return m_value; }
-    const K& key() const { return m_key; }
-
-    virtual void display(std::ostream& os) const {
-        os << m_key << " : " << m_value;
+    // Constructor
+    ExtendedName(const char* firstName = nullptr, const char* lastName = nullptr)
+        : IndividualName(firstName) {
+        m_lastName = copyString(lastName);
     }
 
-    friend std::ostream& operator<<(std::ostream& os, const Pair& pair) {
-        pair.display(os);
-        return os;
+    // Copy Constructor
+    ExtendedName(const ExtendedName& other) : IndividualName(other) {
+        m_lastName = copyString(other.m_lastName);
+    }
+
+    // Copy Assignment Operator
+    ExtendedName& operator=(const ExtendedName& other) {
+        if (this != &other) {
+            IndividualName::operator=(other);
+            delete[] m_lastName;
+            m_lastName = copyString(other.m_lastName);
+        }
+        return *this;
+    }
+
+    // Destructor
+    ~ExtendedName() {
+        delete[] m_lastName;
+    }
+
+    // Print function
+    ostream& print(ostream& ostr) const override {
+        IndividualName::print(ostr);
+        if (m_lastName) {
+            ostr << " " << m_lastName;
+        }
+        return ostr;
     }
 };
 
-#endif // PAIR_H
+// Overload << operator for ExtendedName
+ostream& operator<<(ostream& ostr, const ExtendedName& name) {
+    return name.print(ostr);
+}
 ```
