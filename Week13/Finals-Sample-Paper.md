@@ -1,4 +1,4 @@
-## Dynamic Memory Allocation and the Rule of Three - `Tag` Class Implementation
+## Question 1 - Dynamic Memory Allocation and the Rule of Three (`Tag` Class Implementation)
 
 ### 📝 Objective
 The task is to implement a class named **`Tag`**, ensuring it adheres to the **Rule of Three** while managing dynamic memory allocation. The class should also anticipate inheritance and provide a method for formatted display. Follow the points below for the implementation details.
