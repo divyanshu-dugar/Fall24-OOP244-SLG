@@ -1,4 +1,4 @@
-### Full Implementation of the `Tag` Class
+### ### Question 1 - Answer
 
 Below is the complete implementation of the `Tag` class, following the requirements of the Rule of Three, dynamic memory allocation, and inheritance readiness.
 
@@ -69,5 +69,54 @@ int main() {
     return 0;
 }
 ```
+
+---
+### Question 2 - Answer
+
+Here is the implementation for the `calcSum` template function in a standalone module named `calc.h`. The function follows the given requirements for summing up elements in an array based on a specific condition.
+
+---
+
+### **`calc.h`**
+
+```cpp
+#ifndef CALC_H
+#define CALC_H
+
+#include <cstddef> // For size_t
+
+// Template function implementation
+template <typename classType, typename dataType, typename idType>
+void calcSum(const classType* array, dataType& sum, const idType& id, size_t size) {
+    sum = 0; // Initialize the sum to 0
+    for (size_t i = 0; i < size; ++i) {
+        if (array[i] == id) { // Compare array element with the identifier
+            sum += static_cast<dataType>(array[i]); // Add the value to sum after casting
+        }
+    }
+}
+
+#endif // CALC_H
+```
+
+---
+
+### **Explanation**
+
+1. **Parameters**:
+   - `const classType* array`: A pointer to the array of elements.
+   - `dataType& sum`: A reference to the variable where the sum will be stored.
+   - `const idType& id`: The identifier used to match elements.
+   - `size_t size`: The size of the array.
+
+2. **Logic**:
+   - Initialize `sum` to 0.
+   - Loop through the array and check if each element matches `id` using the `==` operator.
+   - Use `static_cast<dataType>` to safely cast the element to the appropriate type for addition.
+
+3. **Template Versatility**:
+   - The function can handle arrays of different types (`classType`).
+   - It allows summation into any numeric type (`dataType`).
+   - The identifier type (`idType`) can also vary depending on the use case.
 
 ---
