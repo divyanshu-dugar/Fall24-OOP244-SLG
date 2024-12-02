@@ -100,23 +100,3 @@ void calcSum(const classType* array, dataType& sum, const idType& id, size_t siz
 ```
 
 ---
-
-### **Explanation**
-
-1. **Parameters**:
-   - `const classType* array`: A pointer to the array of elements.
-   - `dataType& sum`: A reference to the variable where the sum will be stored.
-   - `const idType& id`: The identifier used to match elements.
-   - `size_t size`: The size of the array.
-
-2. **Logic**:
-   - Initialize `sum` to 0.
-   - Loop through the array and check if each element matches `id` using the `==` operator.
-   - Use `static_cast<dataType>` to safely cast the element to the appropriate type for addition.
-
-3. **Template Versatility**:
-   - The function can handle arrays of different types (`classType`).
-   - It allows summation into any numeric type (`dataType`).
-   - The identifier type (`idType`) can also vary depending on the use case.
-
----
