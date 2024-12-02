@@ -1,4 +1,5 @@
 ### Question 1 - Answer
+---
 
 Below is the complete implementation of the `Tag` class, following the requirements of the Rule of Three, dynamic memory allocation, and inheritance readiness.
 
@@ -72,7 +73,6 @@ int main() {
 
 ---
 ### Question 2 - Answer
-
 ---
 
 ### **`calc.h`**
@@ -98,6 +98,7 @@ void calcSum(const classType* array, dataType& sum, const idType& id, size_t siz
 ```
 ---
 ### Question 3 - Answer
+---
 
 ```cpp
 #include <cstring>
